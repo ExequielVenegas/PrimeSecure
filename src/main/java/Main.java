@@ -15,46 +15,38 @@ public class Main {
 
         //Menu navegación
         Scanner scan = new Scanner(System.in);
-        int choice=5;
+        int choice=6;
         do{
             choice = welcomeMenu(scan);
             switch (choice){
                 case 1: // generar codigos usando hilos
                     inputOutputManager.runMultipleThreads(globalPrimes);
                     break;
-                case 2: // mostrar codigos
+                case 2: // mostrar codigos generados
                     System.out.println("Códigos generados: ");
                     globalPrimes.printSets();
                     break;
                 case 3: // agregar codigo a lista oficial de codigos usados
+                    inputOutputManager.addToOfficialList();
                     break;
-                case 4: // eliminar codigo
+                case 4: // mostrar lista completa de codigos oficiales
+                    System.out.println("Codigos oficiales ya registrados y en uso: " + globalPrimes);
                     break;
-                case 5: // salir
+                case 5: // eliminar codigo
+                break;
+                case 6: // salir
                     System.out.println("Saliendo del programa. Gracias por visitar el gestor de códigos PrimeSecure.");
                     break;
             }
 
 
-        }while(choice!=5);
+        }while(choice!=6);
 
 
-
-
-        //System.out.println("\n\n--- PRUEBAS CON HILOS (Generación Concurrente de Primos) ---");
-     //   PrimesList globalPrimes = new PrimesList();
-
-        // Crear varias tareas para generar primos en paralelo
-        // Cada hilo procesará un rango diferente de números
 
         //TODO: GENERAR METODO QUE PIDA VALORES
         //TODO: MEJORAR LOGICA
-       // Thread generator1 = new Thread(new utilities.PrimeGenerator(globalPrimes, 1, 500), "Generador-1");
-       // Thread generator2 = new Thread(new utilities.PrimeGenerator(globalPrimes, 501, 1000), "Generador-2");
 
-        // Iniciar los hilos
-       // generator1.start();
-        //generator2.start();
 
         System.out.println("Hilos generadores de primos iniciados. Esperando que terminen...");
 

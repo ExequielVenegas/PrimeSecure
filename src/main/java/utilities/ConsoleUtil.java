@@ -10,8 +10,9 @@ public class ConsoleUtil {
         System.out.println("1. GENERAR POSIBLES CÓDIGOS ");
         System.out.println("2. MOSTRAR SETS DE CÓDIGOS PRIMOS GENERADOS");
         System.out.println("3. AGREGAR A LISTA DE CÓDIGOS OFICIALES");
-        System.out.println("4. ELIMINAR CÓDIGO DE LISTA DE CÓDIGOS OFICIALES");
-        System.out.println("5. SALIR");
+        System.out.println("4. MOSTRAR LISTA COMPLETA DE CÓDIGOS OFICIALES EN USO");
+        System.out.println("5. ELIMINAR CÓDIGO DE LISTA DE CÓDIGOS OFICIALES");
+        System.out.println("6. SALIR");
         System.out.println("Ingrese el número de su opción:");
         int choice = scan.nextInt();
         return choice;
