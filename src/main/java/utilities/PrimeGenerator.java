@@ -60,6 +60,6 @@ public class PrimeGenerator implements Runnable {
                 System.err.println(Thread.currentThread().getName() + " - Error inesperado al intentar agregar: " + e.getMessage());
             }
         }
-        System.out.println(Thread.currentThread().getName() + "] Generación terminada para el set \"" + setName + "\".");
+        System.out.println(Thread.currentThread().getName() + " - Generación terminada para el set \"" + setName + "\".");
     }
 }

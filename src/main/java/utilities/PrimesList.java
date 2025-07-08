@@ -34,7 +34,7 @@ public class PrimesList extends ArrayList<Integer> {
         }
         if (!isPrime(element)) {
             // Lanza una excepción si el número no es primo
-            throw new IllegalArgumentException("El número " + element + " no es primo y no puede ser agregado a utilities.PrimesList.");
+            throw new IllegalArgumentException("El número " + element + " no es primo y no puede ser agregado a PrimesList.");
         }
         // Si es primo, lo agrega a la lista subyacente de ArrayList
         return super.add(element);
@@ -46,7 +46,7 @@ public class PrimesList extends ArrayList<Integer> {
             Integer element = (Integer) o;
             if (!isPrime(element)) {
                 // Si se intenta remover un número no primo, lanza una excepción
-                throw new IllegalArgumentException("No se puede manipular (remover) el número no primo " + element + " de utilities.PrimesList.");
+                throw new IllegalArgumentException("No se puede manipular (remover) el número no primo " + element + " de PrimesList.");
             }
             // Si es primo, procede con la eliminación normal
             return super.remove(o);

@@ -27,13 +27,14 @@ public class Main {
                     globalPrimes.printSets();
                     break;
                 case 3: // agregar codigo a lista oficial de codigos usados
-                    inputOutputManager.addToOfficialList();
+                    inputOutputManager.addToOfficialList(globalPrimes);
                     break;
                 case 4: // mostrar lista completa de codigos oficiales
                     System.out.println("Codigos oficiales ya registrados y en uso: " + globalPrimes);
                     break;
                 case 5: // eliminar codigo
-                break;
+                    inputOutputManager.removeToOfficialList(globalPrimes);
+                    break;
                 case 6: // salir
                     System.out.println("Saliendo del programa. Gracias por visitar el gestor de códigos PrimeSecure.");
                     break;

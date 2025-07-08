@@ -1,7 +1,6 @@
 package managers;
 import utilities.PrimeGenerator;
 import utilities.PrimesList;
-import utilities.PrimesList.*;
 
 import java.util.Scanner;
 
@@ -49,9 +48,32 @@ public class InputOutputManager {
     }
 
 
-    public void addToOfficialList(){
-        System.out.println("Ingrese código para agregarlo a la lista de códigos oficiales en uso");
-        int codigoAgregado = scan.nextInt();
-        primelist.add(codigoAgregado);
+    public void addToOfficialList(PrimesList globalPrimes){
+        try {
+            System.out.println("Ingrese código para agregarlo a la lista de códigos oficiales en uso");
+            int codigoAgregado = scan.nextInt();
+            globalPrimes.add(codigoAgregado);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
+    }
+
+    public void removeToOfficialList(PrimesList globalPrimes) {
+        try {
+            if (!globalPrimes.isEmpty()) {
+                System.out.println("Ingrese código para eliminar de la lista de códigos oficiales en uso");
+                int codigoEliminado = scan.nextInt();
+                if (globalPrimes.contains(codigoEliminado)) {
+                    globalPrimes.remove(codigoEliminado);
+                } else {
+                    System.out.println("No existe el codigo en la lista de codigos oficiales en uso");
+                }
+            } else {
+                System.out.println("No existe lista de codigos oficiales en uso");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
